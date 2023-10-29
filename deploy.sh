@@ -36,6 +36,13 @@ DEBIAN_FRONTEND=noninteractive sudo apt-get update
 DEBIAN_FRONTEND=noninteractive sudo apt-get install nodejs -y
 sudo npm install -g npm
 
+npm install
+sudo npm install pm2 -g
+pm2 start website.js --name website
+pm2 start app.js --name app
+pm2 startup
+pm2 save
+
 #Generate SSH keys
 sudo ssh-keyscan bitbucket.org >> ~/.ssh/known_hosts
 sudo ssh-keyscan github.com >> ~/.ssh/known_hosts
