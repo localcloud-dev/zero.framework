@@ -7,10 +7,9 @@ class SignUpModal extends HTMLElement {
         this.innerHTML = /*html*/`
         <div class="signup_modal_content">
             <div class="signup_modal_title">Create Account</div>
-            <div class="signup_modal_or">or</div>
             <input class="signup_modal_input" type="email" id="sigup_email">
             <input class="signup_modal_input" type="password" id="signup_password">
-            <div class="signup_modal_terms_hint">By clicking “Create account” or “Continue with GitHub”, “Continue with Bitbucket”, you agree to the <a href="#">LocalCloud TOS</a> and <a  href="#">Privacy Policy</a></div>
+            <div class="signup_modal_terms_hint">By clicking “Create account”, you agree to the <a href="#"> TOS</a> and <a  href="#">Privacy Policy</a></div>
             <div class="signup_modal_black_btn" id="create_account_btn">Create account</div>
             <div class="signup_modal_error" id="signup_modal_error"></div>
             <div class="signup_modal_already_have_account">Already have an account? <a href="/signin">Log in</a></div>

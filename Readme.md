@@ -1,6 +1,8 @@
+**Note: The project is in active development - API and workflows are subject to change**
+
 ### The idea
 
-Instead of wasting your time on learning, trying and checking what is the best frontend framework (I’m talking about Next.js, Vue.js, Remix, Svelte, etc) you can just start developing your project with Zero.Framework now. It hasn’t any dependencies, it doesn’t require building anything, and it’s written in Vanilla JS.
+Instead of wasting your time on learning, trying and checking what is the best frontend framework (I’m talking about Next.js, Vue.js, Remix, Svelte, etc) you can just start developing your project with Zero.Framework now. It hasn’t any dependencies, it doesn’t require building, and it’s written in Vanilla JS.
 
 ### Features
 
@@ -11,9 +13,34 @@ Instead of wasting your time on learning, trying and checking what is the best f
 - It offers a Single Page Application (SPA) template that's ideal for creating web dashboards
 - Additionally, it provides server-side rendering for blogs, documentation, websites, and landing pages, which is highly beneficial for SEO
 - Deployment with one command with [https://localcloud.dev](LocalCloud)
-- SMTP module for transactional emails - you should just copy/paste SMTP email/login from virtually any email service (we recommend Resend or https://loops.so/)
-- Authentication with Supabase from the backend (can be easily replaced by any other project)
-- A simple blog UI with Headless Ghost CMS (can be deployed on LocalCloud of course)
+- Built-in authentication with Supabase (can be easily replaced by any other project)
 - File uploading
 - Custom domains for users powered by LocalCloud
-- The project is released under the Server Side Public License
+- The project is released under the MIT License
+
+### What's not included
+
+- UI because this is just a basic starter kit where you can add your own UI
+
+### How to use
+
+- Install Node.js if you haven't done it yet
+
+- Clone this repository
+
+```
+git clone https://github.com/localcloud-dev/zero.framework.git
+```
+- Install Node.js dependencies
+```
+cd zero.framework
+npm install
+```
+- Create a free Supabase account at https://supabase.com/
+- Set your Supabase key and base URL in zero.framework/public/src/js/api/api.js
+- Start the app (in the project's root folder)
+```
+node index.js
+```
+
+- (Optional but recommended) Create an account on any SMTP service for transactional emails and connect it to Supabase to remove any limits in sending emails. We recommend to use [Resend](https://resend.com/) or [Loops](https://loops.so/).

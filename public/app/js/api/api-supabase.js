@@ -136,8 +136,6 @@ export async function getMe() {
 }
 
 /*Fetch with timeout*/
-setTimeout(check_base_api, 100);
-
 async function fetchWithTimeout(resource, options = {}) {
     const { timeout = 10000 } = options;
 

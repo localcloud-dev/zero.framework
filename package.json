@@ -2,7 +2,7 @@
   "name": "zero.framework",
   "version": "0.0.1",
   "description": "SAAS/Web app starter kit with Vanilla JS",
-  "main": "index.js",
+  "main": "website.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

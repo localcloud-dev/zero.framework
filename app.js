@@ -8,12 +8,12 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const { join } = require('path');
-const dir = join(__dirname, 'public');
-const serve = require('serve-static')(dir);
-app.use(serve);
+
+const servePublic = require('serve-static')(join(__dirname, 'public'));
+app.use(servePublic);
 
 app.get('/*', (req, res) => {
-    var htmlTemplate = fs.readFileSync(__dirname + '/public/' + `app.html`, 'utf8');
+    var htmlTemplate = fs.readFileSync(__dirname + '/public/app/' + `app.html`, 'utf8');
     res.end(htmlTemplate);
 });
 

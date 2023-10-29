@@ -1,7 +1,7 @@
 /*Views*/
 import {homeHTML} from "./views/home.js";
 import {signupHTML} from "./views/signup.js";
-import {signinHTML} from "./views/login.js";
+import {signinHTML} from "./views/signin.js";
 
 /*Utils*/
 import {showNotification} from "./utils/utils.js"
@@ -20,8 +20,14 @@ async function router() {
     //Check if the current URL has query parameters
     handleURLParametersIfExist();
 
+    var loggedUser = null;
+
     //Try to get a session token and check if it's valid
-    let logged_user = getLoggedUser();
+    let sessionToken = await getSessionToken();
+
+    if (sessionToken != null){
+        loggedUser = await getLoggedUser();
+    }
 
     //Handle routes
     let route = routes[location.pathname];
@@ -37,7 +43,7 @@ async function router() {
         }else if (location.pathname == '/signup'){
             app.innerHTML = signupHTML();
         }else {
-            if (session_token == null || session_token == ''){
+            if (sessionToken == null || sessionToken == ''){
                 app.innerHTML = signupHTML();
             }else{
                 //If a user tries to open something except /signin and /signup and we cannot logged info about that user - we show /signin screen
