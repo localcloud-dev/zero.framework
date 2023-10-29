@@ -37,10 +37,14 @@ cd zero.framework
 npm install
 ```
 - Create a free Supabase account at https://supabase.com/
-- Set your Supabase key and base URL in zero.framework/public/src/js/api/api.js
-- Start the app (in the project's root folder)
+- Set your Supabase key and base URL in zero.framework/public/app/js/api/api.js
+- Start the website (in the project's root folder) and open "http://localhost:5226" in a browser:
 ```
-node index.js
+node website.js
+```
+- Start the web dashboard in another Terminal window(in the project's root folder)  and open "http://localhost:5225" in a browser:
+```
+node app.js
 ```
 
 - (Optional but recommended) Create an account on any SMTP service for transactional emails and connect it to Supabase to remove any limits in sending emails. We recommend to use [Resend](https://resend.com/) or [Loops](https://loops.so/).
