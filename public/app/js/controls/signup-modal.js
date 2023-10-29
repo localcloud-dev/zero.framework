@@ -5,15 +5,18 @@ class SignUpModal extends HTMLElement {
         super();
 
         this.innerHTML = /*html*/`
-        <div class="signup_modal_content">
-            <div class="signup_modal_title">Create Account</div>
-            <input class="signup_modal_input" type="email" id="sigup_email">
-            <input class="signup_modal_input" type="password" id="signup_password">
-            <div class="signup_modal_terms_hint">By clicking “Create account”, you agree to the <a href="#"> TOS</a> and <a  href="#">Privacy Policy</a></div>
-            <div class="signup_modal_black_btn" id="create_account_btn">Create account</div>
-            <div class="signup_modal_error" id="signup_modal_error"></div>
-            <div class="signup_modal_already_have_account">Already have an account? <a href="/signin">Log in</a></div>
-        </div>
+        <section>
+            <form>
+                <header><h2>Create Account</h2></header>
+                <input type="email" id="sigup_email">
+                <input type="password" id="signup_password">
+                <p>By clicking “Create account”,
+                <br>you agree to the <a href="#"> TOS</a> and <a  href="#">Privacy Policy</a></p>
+                <button id="create_account_btn">Create account</button>
+                <div id="signup_modal_error"></div>
+                <div>Already have an account? <a href="/signin">Log in</a></div>
+            </form>
+        </section>
         `;
 
         let create_account_btn = this.querySelector("#create_account_btn");

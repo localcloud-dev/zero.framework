@@ -5,16 +5,17 @@ class SigninModal extends HTMLElement {
         super();
 
         this.innerHTML = /*html*/`
-        <div class="signup_modal_content">
-            <div class="signup_modal_title">Log In</div>
-            <div class="signup_modal_or">or</div>
-            <input class="signup_modal_input" type="email" id="login_email">
-            <input class="signup_modal_input" type="password" id="login_password">
-            <div class="signup_modal_black_btn" id="login_btn">Log In</div>
-            <div class="signup_modal_error" id="login_modal_error"></div>
-            <div class="signup_modal_already_have_account"><a href="/reset_passwd">Reset password</a></div>
-            <div class="signup_modal_already_have_account">No account? <a href="/signup">Create one</a></div>
-        </div>
+        <section>
+            <form>
+                <header><h2>Log In</h2></header>
+                <input type="email" id="login_email">
+                <input type="password" id="login_password">
+                <button id="login_btn">Log In</button>
+                <div class="signup_error" id="login_modal_error"></div>
+                <div><a href="/reset_passwd">Reset password</a></div>
+                <div>No account? <a href="/signup">Create one</a></div>
+            </form>
+        <section>
         `;
 
         let create_account_btn = this.querySelector("#login_btn");
