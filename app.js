@@ -14,6 +14,7 @@ app.use(servePublic);
 
 app.get('/*', (req, res) => {
     var htmlTemplate = fs.readFileSync(__dirname + '/public/app/' + `app.html`, 'utf8');
+    res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
     res.end(htmlTemplate);
 });
 

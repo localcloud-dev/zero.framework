@@ -28,18 +28,13 @@ sudo ufw allow 443
 sudo ufw allow 22
 sudo ufw --force enable
 
-#Install npm & node.js
-sudo mkdir -p /etc/apt/keyrings
-curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
-echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
-DEBIAN_FRONTEND=noninteractive sudo apt-get update
-DEBIAN_FRONTEND=noninteractive sudo apt-get install nodejs -y
-sudo npm install -g npm
+#Install Bun.js
+curl -fsSL https://bun.sh/install | bash
 
-npm install
-sudo npm install pm2 -g
-pm2 start website.js --name website
-pm2 start app.js --name app
+sudo bun install pm2 -g
+pm2 start --interpreter ~/.bun/bin/bun website.js --name website
+pm2 start --interpreter ~/.bun/bin/bun app.js --name app
+
 pm2 startup
 pm2 save
 

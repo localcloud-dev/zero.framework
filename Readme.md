@@ -24,7 +24,7 @@ Instead of wasting your time on learning, trying and checking what is the best f
 
 ### How to use
 
-- Install Node.js if you haven't done it yet
+- Install Bun.js (a faster, leaner, more modern replacement for Node.js) - https://bun.sh/docs/installation
 
 - Clone this repository
 
@@ -34,17 +34,17 @@ git clone https://github.com/localcloud-dev/zero.framework.git
 - Install Node.js dependencies
 ```
 cd zero.framework
-npm install
+bun install
 ```
 - Create a free Supabase account at https://supabase.com/
 - Set your Supabase key and base URL in zero.framework/public/app/js/api/api.js
 - Start the website (in the project's root folder) and open "http://localhost:5226" in a browser:
 ```
-node website.js
+bun website.js
 ```
 - Start the web dashboard in another Terminal window(in the project's root folder)  and open "http://localhost:5225" in a browser:
 ```
-node app.js
+bun app.js
 ```
 
 - (Optional but recommended) Create an account on any SMTP service for transactional emails and connect it to Supabase to remove any limits in sending emails. We recommend to use [Resend](https://resend.com/) or [Loops](https://loops.so/).
