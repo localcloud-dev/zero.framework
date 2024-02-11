@@ -2,7 +2,7 @@
 
 ### The idea
 
-Instead of wasting your time on learning, trying and checking what is the best frontend framework (I’m talking about Next.js, Vue.js, Remix, Svelte, etc) you can just start developing your project with Zero.Framework now. It hasn’t any dependencies, it doesn’t require building, and it’s written in Vanilla JS.
+Instead of wasting your time on learning, trying and checking what is the best frontend framework (Next.js, Vue.js, Remix, Svelte, etc) you can just start developing your project with Zero.Framework now. It hasn’t any dependencies, it doesn’t require building, and it’s written in Vanilla JS.
 
 ### Features
 
